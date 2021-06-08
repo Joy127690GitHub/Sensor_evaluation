@@ -93,10 +93,10 @@ class Ultra_sm_sync(Ultra_sm_std):
         
         if self.error_code == 0xFF: #check error ok, if 0xFF, error free
             if int(data_unpacked[2][0:2],16) not in self.event_echo.keys():
-                #print('Sensor', self.node_addr, 'measured distance:', round(self.distance,0), 'mm,', 'amplitude:', round(self.amplitude,0), 'dB SPL')
+                print('Sensor', self.node_addr, 'measured distance:', round(self.distance,0), 'mm,', 'amplitude:', round(self.amplitude,0), 'dB SPL')
                 pass
             else:
-                #print('Sensor', self.node_addr, ':', self.event_echo[int(data_unpacked[2][0:2],16)])
+                print('Sensor', self.node_addr, ':', self.event_echo[int(data_unpacked[2][0:2],16)])
                 pass
         else:
             print('Error code 0x', self.error_code,':', self.error_codes[self.error_code],

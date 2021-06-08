@@ -129,8 +129,7 @@ class Thread_sampling(QtCore.QThread):
         self.ax_sensingRange = 2500 #in mm, default
                             
     def ser_comm(self): 
-        com_port = 'COM7'
-        #com_port = 'COM9'
+        com_port = 'COM6'
         com_cfg_sm = {'baudrate':    19200,
                       'bytesize':    8,
                       'parity':      'N',
@@ -144,15 +143,15 @@ class Thread_sampling(QtCore.QThread):
         #self.list_sm = [ucc2500]
         #self.list_sm = [ucc4000_7,]
         
-        self.list_sm = [ucc4000_7]
+        #self.list_sm = [ucc4000_7]
         #self.list_sm = [ucc4000_2,ucc4000_3]
-        print(len(self.list_sm))
+        #print(len(self.list_sm))
         
         # Sensor module type with sync function
         ucc4000_sync2 = sm_sync(sensing_range=4000,node_addr=0x2)    
         ucc4000_sync3 = sm_sync(sensing_range=4000,node_addr=0x3)   
         ucc2500_sync7 = sm_sync(sensing_range=2500,node_addr=0x7)
-        #self.list_sm = [ucc4000_sync2,ucc4000_sync3]
+        self.list_sm = [ucc4000_sync2,ucc4000_sync3]
         #self.list_sm = [ucc4000_sync3]
         #self.list_sm = [ucc2500_sync7]
         #self.list_sm = [ucc2500]

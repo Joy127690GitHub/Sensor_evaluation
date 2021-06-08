@@ -116,9 +116,9 @@ class SerialRW_SM(Comm_serial):
                         
                     elif self.list_sm[0].sm_mode == 'Synchron Sensor-Array':               
 
-                        snddata = self.list_sm[0].msg_tx_pack(addr=0x01, r_w='r',op_code=0xFA,data_bytes=[0x2F])
-                        #snddata = self.list_sm[0].msg_tx_pack(addr=0x02, r_w='r',op_code=0xFB,data_bytes=[0x3F])
-                        #snddata = self.list_sm[0].msg_tx_pack(addr=0x02, r_w='r',op_code=0x37,data_bytes=[0x3F])
+                        snddata = self.list_sm[0].msg_tx_pack(addr=0x01, r_w='r',op_code=0xFA,data_bytes=[0x2F]) #Synchron send mode
+                        #snddata = self.list_sm[0].msg_tx_pack(addr=0x02, r_w='r',op_code=0xFB,data_bytes=[0x3F]) #send receive mode
+                        #snddata = self.list_sm[0].msg_tx_pack(addr=0x02, r_w='r',op_code=0x37,data_bytes=[0x3F]) #user-profile A
 
                     result=self.my_serial.write(snddata)
 
