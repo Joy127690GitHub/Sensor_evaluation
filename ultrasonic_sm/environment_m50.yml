@@ -1,0 +1,12 @@
+name: env_m50 #updated 20210607, not tested
+channels:
+  - anaconda
+dependencies:
+  - python>=3.7 #python 3 needed
+  - bitstring  
+  - matplotlib
+  - numpy
+  - pandas
+  - PyQt5
+  - pySerial #needed for serial communication
+  - spyder      #IDE specially for this environment
